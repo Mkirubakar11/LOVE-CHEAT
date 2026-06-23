@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Special Puzzle ❤️</title>
+
+<style>
+
+body{
+
+background:black;
+color:white;
+font-family:Poppins,sans-serif;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+height:100vh;
+text-align:center;
+flex-direction:column;
+
+}
+
+input{
+
+padding:15px;
+font-size:18px;
+margin:20px;
+
+}
+
+button{
+
+padding:15px 30px;
+font-size:18px;
+cursor:pointer;
+
+}
+
+#qr{
+
+display:none;
+margin-top:30px;
+
+}
+
+img{
+
+width:250px;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>❤️ Solve The Puzzle ❤️</h1>
+
+<h2>
+Who Loves YOU The Most?
+</h2>
+
+<input
+id="answer"
+placeholder="Type Answer">
+
+<button onclick="checkAnswer()">
+
+Submit
+
+</button>
+
+<div id="qr">
+
+<h2>
+Congratulations ❤️
+</h2>
+
+<p>
+Scan This QR Code
+</p>
+
+<img src="images/frame.jpg">
+
+</div>
+
+<script>
+
+function checkAnswer(){
+
+let answer =
+document
+.getElementById("answer")
+.value
+.toLowerCase();
+
+if(answer === "kirubakar"){
+
+document
+.getElementById("qr")
+.style.display="block";
+
+}
+else{
+
+alert(
+"Wrong Answer ❤️"
+);
+
+}
+
+}
+
+</script>
+
+</body>
+
+</html>
