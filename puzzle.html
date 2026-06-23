@@ -1,122 +1,181 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Special Puzzle ❤️</title>
+<title>Happy Birthday Vaishnavi ❤️</title>
 
-<style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-body{
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 
-background:black;
-color:white;
-font-family:Poppins,sans-serif;
-
-display:flex;
-justify-content:center;
-align-items:center;
-
-height:100vh;
-text-align:center;
-flex-direction:column;
-
-}
-
-input{
-
-padding:15px;
-font-size:18px;
-margin:20px;
-
-}
-
-button{
-
-padding:15px 30px;
-font-size:18px;
-cursor:pointer;
-
-}
-
-#qr{
-
-display:none;
-margin-top:30px;
-
-}
-
-img{
-
-width:250px;
-
-}
-
-</style>
-
+<link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<h1>❤️ Solve The Puzzle ❤️</h1>
+<div class="particles"></div>
 
-<h2>
-Who Loves YOU The Most?
-</h2>
+<!-- HERO SECTION -->
 
-<input
-id="answer"
-placeholder="Type Answer">
+<section class="hero">
 
-<button onclick="checkAnswer()">
+<div class="hero-content">
 
-Submit
+<h3>FOR SOMEONE SPECIAL</h3>
 
-</button>
-
-<div id="qr">
-
-<h2>
-Congratulations ❤️
-</h2>
+<h1>Vaishu chloo ❤️</h1>
 
 <p>
-Scan This QR Code
+A Birthday Gift From Kirubakar
 </p>
 
-<img src="images/frame.jpg">
+<button onclick="startExperience()">
+Open Your Surprise
+</button>
 
 </div>
 
-<script>
+</section>
 
-function checkAnswer(){
+<!-- MAIN CONTENT -->
 
-let answer =
-document
-.getElementById("answer")
-.value
-.toLowerCase();
+<div id="mainContent">
 
-if(answer === "kirubakar"){
+<!-- INTRO -->
 
-document
-.getElementById("qr")
-.style.display="block";
+<section class="intro section">
 
-}
-else{
+<h2>Happy Birthday MINIKI 🎂</h2>
 
-alert(
-"Wrong Answer ❤️"
-);
+<p class="intro-text">
+Today is not just another day.
+Today is the day the world was blessed with someone truly special.
+Thank you for filling my life with happiness, warmth and beautiful memories.
+</p>
 
-}
+</section>
 
-}
+<!-- PHOTO GALLERY -->
 
-</script>
+<section class="gallery-section section">
+
+<h2>Our Beautiful Memories 📸</h2>
+
+<div class="gallery">
+
+<img src="images/photo1.jpg">
+<img src="images/photo2.jpg">
+<img src="images/photo3.jpg">
+<img src="images/photo4.jpg">
+<img src="images/photo5.jpg">
+<img src="images/photo6.jpg">
+<img src="images/photo7.jpg">
+<img src="images/photo8.jpg">
+<img src="images/photo9.jpg">
+<img src="images/photo10.jpg">
+<img src="images/photo11.jpg">
+<img src="images/photo12.jpg">
+</div>
+
+</section>
+
+<!-- LOVE LETTER -->
+
+<section class="letter-section section">
+
+<div class="letter-card">
+
+<h2>My Letter To You 💌</h2>
+
+<p id="typewriter"></p>
+
+</div>
+
+</section>
+
+<!-- REASONS -->
+
+<section class="reasons section">
+
+<h2> Reasons Why I Love You ❤️</h2>
+
+<div class="reason-grid">
+
+<div class="reason">Your Smile 😊</div>
+<div class="reason">Your Kind Heart 💖</div>
+<div class="reason">Your Loyalty ❤️ For US</div>
+<div class="reason">Your Beautiful Soul ✨</div>
+<div class="reason">Your Support 🤝</div>
+<div class="reason">Your Positivity ☀️</div>
+<div class="reason">Your Voice 🎵</div>
+<div class="reason">Your 0 IQ 🧠 When around me 😂</div>
+
+</div>
+
+</section>
+
+<!-- GIFT -->
+
+<section class="gift-section section">
+
+<h2>A Special Gift For You 🎁 Just TAB THE BOX</h2>
+
+<div class="gift-box" onclick="openGift()">
+🎁
+</div>
+
+<div id="giftContent">
+
+<video
+id="giftVideo"
+controls
+autoplay>
+
+<source
+src="video/newone.mp4"
+type="video/mp4">
+
+</video>
+
+<div id="giftMessage"></div>
+
+</div>
+
+</section>
+
+<!-- FINAL -->
+
+<section class="final section">
+
+<h2>Forever Yours ❤️</h2>
+
+<p>
+No matter where life takes us,
+you will always hold a special place in my heart.
+</p>
+
+<h1>Happy Birthday Vaishu mah ❤️</h1>
+
+<h3>— Kirubakar</h3>
+
+</section>
+
+</div>
+
+<!-- MUSIC -->
+
+<audio id="bgMusic" loop>
+<source src="music/song.mp3" type="audio/mpeg">
+</audio>
+
+<!-- FIREWORKS -->
+
+<canvas id="fireworks"></canvas>
+
+<script src="script.js"></script>
 
 </body>
-
 </html>
