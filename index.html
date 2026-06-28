@@ -10,10 +10,12 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-height:100vh;
-overflow:hidden;
+min-height:100vh;
+overflow-x:hidden;
+overflow-y:auto;
 font-family:Poppins,sans-serif;
-background:url('images/bg.jpg') center center/cover no-repeat fixed;
+background:url('images/bg.jpg') center center/cover no-repeat;
+background-attachment:scroll;
 }
 body::before{
 content:"";
@@ -36,17 +38,21 @@ animation:float 10s linear infinite;
 100%{transform:translateY(-120vh) scale(1.2);opacity:0}
 }
 .container{
+
 position:relative;
 z-index:2;
-height:100%;
+min-height:100vh;
 display:flex;
 justify-content:center;
 align-items:center;
-padding:20px;
+padding:30px 15px;
+
 }
 .card{
-width:min(90%,760px);
-padding:60px 45px;
+
+width:95%;
+max-width:760px;
+padding:30px 20px;
 text-align:center;
 border-radius:30px;
 background:rgba(255,255,255,.08);
@@ -65,25 +71,31 @@ letter-spacing:6px;
 margin-bottom:15px;
 }
 h1{
-font:700 58px "Playfair Display",serif;
+font-family:"Playfair Display",serif;
+font-size:clamp(32px,8vw,58px);
+line-height:1.2;
 color:#fff;
 text-shadow:0 0 25px rgba(255,215,0,.8);
 margin-bottom:15px;
 }
 .quote{
-font:42px "Great Vibes",cursive;
+font-family:"Great Vibes",cursive;
+font-size:clamp(26px,7vw,42px);
+line-height:1.5;
 color:#FFD700;
 margin-bottom:30px;
 }
 p{
-font-size:18px;
+font-size:clamp(15px,4vw,18px);
+line-height:1.9;
 line-height:1.9;
 color:#f2f2f2;
 margin-bottom:45px;
 }
 .slider{
 position:relative;
-width:340px;
+width:100%;
+max-width:340px;
 height:65px;
 margin:auto;
 border-radius:60px;
@@ -93,6 +105,8 @@ overflow:hidden;
 box-shadow:0 0 25px rgba(255,215,0,.25);
 }
 .label{
+font-size:13px;
+letter-spacing:1px;
 position:absolute;
 inset:0;
 display:flex;
@@ -105,14 +119,14 @@ letter-spacing:2px;
 position:absolute;
 left:5px;
 top:5px;
-width:55px;
-height:55px;
+width:50px;
+height:50px;
 border-radius:50%;
 background:linear-gradient(135deg,#FFE27A,#D4AF37);
 display:flex;
 align-items:center;
 justify-content:center;
-font-size:22px;
+font: size 20px;
 cursor:grab;
 user-select:none;
 box-shadow:0 0 20px gold;
