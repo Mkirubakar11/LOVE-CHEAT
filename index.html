@@ -131,6 +131,51 @@ cursor:grab;
 user-select:none;
 box-shadow:0 0 20px gold;
 }
+
+.question{
+font-family:'Playfair Display',serif;
+font-size:40px;
+color:#FFD700;
+margin:25px 0;
+}
+
+.proposalText{
+font-family: fantasy;
+font-size:36px;
+color:white;
+line-height:1.8;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:25px;
+margin:35px 0;
+}
+
+#yesBtn,#noBtn{
+padding:15px 35px;
+font-size:20px;
+border:none;
+border-radius:50px;
+cursor:pointer;
+}
+
+#yesBtn{
+background:gold;
+}
+
+#noBtn{
+background:#ff4b4b;
+color:white;
+transition:.3s;
+}
+
+#funnyText{
+color:#FFD700;
+margin-top:20px;
+font-size:18px;
+}
 </style>
 </head>
 <body>
@@ -145,23 +190,59 @@ box-shadow:0 0 20px gold;
 
 <div class="quote">""Not all treasures are made of gold. Mine is you."."</div>
 
+<div id="proposalSection">
+
+<h2 class="question">
+I'M ALWAYS FALLING FOR YOU ❤️
+</h2>
+
+<p class="proposalText">
+
+WILL YOU FOREVER WALK WITH ME AND
+READ WITH ME AND RATTLE OFF ENDLESS RULES
+AND EXTENTUATING CIRCUMSTANCES WITH ME...?
+
+</p>
+
+<div class="buttons">
+
+<button id="yesBtn">
+
+YES ❤️
+
+</button>
+
+<button id="noBtn">
+
+NO 🙈
+
+</button>
+
+</div>
+
+<p id="funnyText">
+
+🥺 Don't break my heart already...
+
+</p>
+
+</div>
+
+<div id="unlockSection" style="display:none;">
+
+<h2 style="color:white;">
+You Just Made Me The Happiest Person ❤️
+</h2>
+
 <p>
-Before you continue...<br><br>
-
-I want you to remember something.
-
-No matter how many birthdays come and go...
-
-You'll always be one of the most beautiful parts of my life.
-
-Now...
-
-There's a little surprise waiting just for you. ❤️
+Now... there's a little surprise waiting just for you...
 </p>
 
 <div class="slider" id="slider">
-<div class="label">...........Slide To Unlock My Heart ❤️ ➜</div>
+<div class="label">Slide To Unlock My Heart ❤️ ➜</div>
 <div class="thumb" id="thumb">➜</div>
+</div>
+
 </div>
 
 </div>
@@ -203,6 +284,50 @@ pos=5;
 thumb.style.left="5px";
 }
 };
+const proposal = document.getElementById("proposalSection");
+const unlock = document.getElementById("unlockSection");
+
+document.getElementById("yesBtn").onclick = function(){
+
+    proposal.style.display = "none";
+
+    unlock.style.display = "block";
+
+};
+
+const noBtn = document.getElementById("noBtn");
+
+const funnyText = document.getElementById("funnyText");
+
+const lines = [
+
+"😂 Nice Try...",
+
+"🥹 Please choose YES...",
+
+"🙈 NO is feeling shy...",
+
+"❤️ YES looks much better...",
+
+"🤣 Stop chasing me..."
+
+];
+
+noBtn.addEventListener("mouseover", moveNo);
+noBtn.addEventListener("touchstart", moveNo);
+
+function moveNo(){
+
+    noBtn.style.position="relative";
+
+    noBtn.style.left=(Math.random()*180-90)+"px";
+
+    noBtn.style.top=(Math.random()*80-40)+"px";
+
+    funnyText.innerHTML =
+    lines[Math.floor(Math.random()*lines.length)];
+
+}
 </script>
 
 </body>
