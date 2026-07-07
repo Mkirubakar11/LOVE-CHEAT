@@ -94,9 +94,9 @@ margin-bottom:45px;
 }
 .slider{
 position:relative;
-width:100%;
-max-width:340px;
-height:65px;
+width:95%;
+max-width:420px;
+height:80px;
 margin:auto;
 border-radius:60px;
 background:rgba(255,255,255,.08);
@@ -119,14 +119,14 @@ letter-spacing:2px;
 position:absolute;
 left:5px;
 top:5px;
-width:50px;
-height:50px;
+width:65px;
+height: 65px;
 border-radius:50%;
 background:linear-gradient(135deg,#FFE27A,#D4AF37);
 display:flex;
 align-items:center;
 justify-content:center;
-font: size 20px;
+font: size 28px;
 cursor:grab;
 user-select:none;
 box-shadow:0 0 20px gold;
@@ -277,7 +277,7 @@ window.onpointerup=()=>{
 if(!drag)return;
 drag=false;
 const max=slider.clientWidth-thumb.clientWidth-5;
-if(pos>max-10){
+if(pos>max-100){
 window.location.href="puzzle.html";
 }else{
 pos=5;
